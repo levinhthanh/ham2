@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+
+<body>
+    <script>
+        let num = parseInt(prompt('Nhập vào một số bất kỳ:'));
+        let result = checkSNT(num);
+        if (result) document.write(num + ' là số nguyên tố');
+        else document.write(num + ' không phải là số nguyên tố');
+        function checkSNT(a) {
+            let b = true;
+            for (let i = 2; i < a; i++) {
+                if (a % i === 0) b = false;
+            }
+            return b;
+        }
+    </script>
+</body>
+
+</html>

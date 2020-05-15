@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi độ dài</title>
+</head>
+
+<body>
+    <script>
+        let pth
+        do {
+            pth =prompt('Nhập 0 nếu muốn đổi metter sang feet, Nhập 1 nếu muốn đổi từ feet sang metter:');
+           }
+        while(pth!='1' && pth!='0');
+        let num= +prompt('Nhập giá trị cần đổi:');
+        let result;
+        if (pth==='0') result=metToFeet(num);
+        else result=feetToMet(num);
+        function metToFeet(value)
+        {
+            let result=value*3.279;
+            return result;
+        }
+        function feetToMet(value)
+        {
+            let result=value*0.305;
+            return result;
+        }
+        if (pth==='0') document.write(num+' metters = '+result+' feets');
+        else document.write(num+' feets = '+result+' metters');
+       
+       
+    </script>
+</body>
+
+</html>
