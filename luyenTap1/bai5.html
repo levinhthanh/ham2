@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nhap{
+            width: 200px;
+            height: 20px;
+        }
+        button{
+            width: 50px;
+            height: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <input type="text" id="nhap" value=""/></br></br>
+    <button onclick="checkStar()">Nhập</button></br></br>
+    <option id="xuat"></option>
+    <script>
+        let names=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+        let stars=['Ursa_Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa_Major' , 'Leo'];
+        
+        function checkStar()
+        {    
+           let check=0;
+           let input=document.getElementById('nhap').value;
+             for(i=0;i<names.length;i++)
+             {  
+                 if(input===names[i]) 
+                 {document.getElementById('xuat').innerHTML=names[i] +' có chòm sao là ' +stars[i]; 
+                 check=1;
+                 break;}
+             }
+            if(check===0) document.getElementById('xuat').innerHTML=input +' chưa có thông tin chòm sao';
+        }
+    </script>
+</body>
+</html>
