@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=+prompt('Nhập vào một số:');
+        let result=check(num);
+        if (result) document.write('Đây là số nguyên dương');
+        else document.write('Đây không phải là số nguyên dương');
+        function check(a)
+        {
+            let c= a/parseInt(a);
+            if (c ==1 & a >0) return true;
+            else return false;
+        }
+    </script>
+</body>
+</html>

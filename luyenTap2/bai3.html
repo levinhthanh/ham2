@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giai thừa</title>
+</head>
+
+<body>
+    <script>
+        let num = parseInt(prompt('Nhập số cần tính giai thừa:'));
+        let gth = giaiThua(num);
+        document.write(num + '! = ' + gth);
+        function giaiThua(a) {
+            let b = 1;
+            if (a !== 0 && a !== 1)
+                for (i = a; i > 1; i--) {
+                    b *= i;
+                }
+                return b;
+        }
+    </script>
+</body>
+
+</html>

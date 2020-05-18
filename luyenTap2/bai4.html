@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiêm tra số</title>
+</head>
+
+<body>
+    <script>
+        const NUM='0123456789'
+        let inp = prompt('Nhập vào ký tự:');
+        let res = checkNumber(inp);
+        if (res) document.write('Đây là 1 số!');
+        else document.write('Đây không phải là 1 số!');
+        
+        
+        function checkNumber(a) {
+            check=true;
+            for(let i=0; i<a.length;i++)
+            {  
+                let b=a[i];
+                if (NUM.indexOf(a[i])==-1)
+                return false;
+            }
+            return true;       
+        }
+    </script>
+</body>
+
+</html>

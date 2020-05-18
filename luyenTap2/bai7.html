@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi chỗ 2 số</title>
+</head>
+<body>
+    <script>
+        let num1=parseInt(prompt('Nhập số thứ nhất'));
+        let num2=parseInt(prompt('Nhập số thứ hai'));
+        let result= swap(num1,num2);
+        document.write(result);
+        function swap(a,b)
+        {
+             let mang=[];
+             mang[0]=b;
+             mang[1]=a;
+             return mang;
+        }
+    </script>
+</body>
+</html>
