@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+
+<body>
+    <script>
+        let inp = prompt('Nhập vào một từ:');
+        debugger;
+        let arr = inp.split("");
+        let res = false;
+        let len = 0;
+        isPalindrome();
+        if (res) document.write(inp + ' là 1 từ đối xứng!');
+        else document.write(inp + ' không phải là 1 từ đối xứng!');
+        function isPalindrome() {
+            len = arr.length;
+            if (arr[0] === arr[len - 1]) {
+                arr.shift();
+                arr.pop();
+                if (arr.length === 1 || arr.length === 0)
+                    res = true;
+                else
+                    isPalindrome();
+
+            } else
+                res = false;
+        }
+    </script>
+</body>
+
+</html>
